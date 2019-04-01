@@ -5,15 +5,15 @@ import (
 )
 
 type book struct {
-	ISBN	string	`json:"isbn"`
-	Title	string	`json:"title"`
-	Author	string	`json:"author"`
+	ISBN   string `json:"isbn"`
+	Title  string `json:"title"`
+	Author string `json:"author"`
 }
 
 func show() (*book, error) {
-	//fetch a specific book record from dynamodb in this case 
+	//fetch a specific book record from dynamodb in this case
 	//marcus aurelius
-	bk, err := getItem("978-1292292838"}
+	bk, err := getItem("978-1292292838")
 	if err != nil {
 		return nil, err
 	}
