@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/aws/aws-sdk-go/aws"
-	"github.com/aws/aws-sdk-go/aws/sessions"
-	"github.com/aws/aws-sdk-go/aws/service/dynamodb"
-	"github.com/aws/aws-sdk-go/aws/service/dynamodb/dynamodbattribute"
+	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/aws/aws-sdk-go/service/dynamodb"
+	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 )
 
 //Declare a new DynamoDB instance. This is safe for concurrent use
@@ -31,7 +31,7 @@ func getItem(isbn String) (*book, error) {
 		return nil, nil
 	}
 
-	//the result.item object returned has underlying type of 
+	//the result.item object returned has underlying type of
 	//map[string]*AttributeValue. we can use unmarshalMap helper to
 	//parse this straight into fields of a struct
 
@@ -43,4 +43,3 @@ func getItem(isbn String) (*book, error) {
 
 	return bk, nil
 }
-
