@@ -21,7 +21,7 @@ and then returning a response. The db.go file handles writing to DynamoDB
 Functions in this file:
 - router: handling http requests
 - show: returning data about an employee
-- create: creating a new emplouee
+- create: creating a new employee
 - serverError: log server errors to log
 - return client errors as HTTP response
 
