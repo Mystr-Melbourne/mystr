@@ -11,5 +11,6 @@ assignees: ''
 # NPM package request
 **Name**: 
 **Version**:
+**URL**:
 **Short description of the plugin**:
 **Reason why it is necessary**:
